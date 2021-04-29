@@ -19,11 +19,6 @@ with open('config.json') as config_data:
 emojis=[]
 
 @client.event
-async def on_ready():
-    for emoji in client.emojis:
-        print('name:', emoji.name, 'id:', emoji.id)
-
-@client.event
 @asyncio.coroutine
 def on_message(message):
     if message.author == client.user:
