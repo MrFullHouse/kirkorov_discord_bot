@@ -6,7 +6,7 @@
 
 Пригласить бота можно по ссылке:  https://discord.com/api/oauth2/authorize?client_id=837423732892106842&permissions=0&scope=bot
 
-
+![Пример работы](https://i.imgur.com/BAJ1FFJ.jpg)
 
 
 **Если хотите сделать на его основе свой со своими ответами:**
