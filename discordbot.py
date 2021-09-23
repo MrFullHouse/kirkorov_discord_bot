@@ -23,7 +23,7 @@ phrasesTwo=['Я почувствовал что ты сделал это спе�
 @client.event
 @asyncio.coroutine
 def on_message(message):
-    scenario = random.randint(1, 10)
+    scenario = random.randint(5, 10)
     if message.author == client.user:
         return
     if message.content.lower() == 'да':
@@ -59,4 +59,17 @@ def on_message(message):
           a=client.get_emoji(837420439843897410)
           yield from message.add_reaction(d)
           yield from message.add_reaction(a)
+    if message.content.lower() == 'да.':
+            p=client.get_emoji(837420439553966100)
+            i=client.get_emoji(837420438690463805)
+            z=client.get_emoji(837420439533256714)
+            d=client.get_emoji(837420439215013909)
+            a=client.get_emoji(837420439843897410)
+            dot=client.get_emoji(890644282371870751)
+            yield from message.add_reaction(p)
+            yield from message.add_reaction(i)
+            yield from message.add_reaction(z)
+            yield from message.add_reaction(d)
+            yield from message.add_reaction(a)
+            yield from message.add_reaction(dot)
 client.run(token)
