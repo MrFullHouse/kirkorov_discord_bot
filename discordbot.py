@@ -17,13 +17,21 @@ with open('config.json') as config_data:
     config_json = json.load(config_data)
     token = config_json['discord_token']
 emojis=[]
-phrasesOne=['Добрый вечер <:lambert:887347067742208011>','Добрый вечер <:lambert:887347067742208011>','Умей проигрывать дружок, ты проиграл <:Murlock_Jokir:874544048029978664>','Может еще сюда нажмёшь: \n<https://www.youtube.com/watch?v=dQw4w9WgXcQ> <:murlockCoolStory:878462386749714492>','Ты пойман за руку, дешёвка','<a:orchesterDrums:886604700110159924> <a:orchesterGuitar:886604700714152026> <a:orchesterMex:886604700626079804> <a:orchesterMicro:886604700449898576> <a:orchesterPiano:886604700642844672> <a:orchesterSax:886604700613509191>']
-phrasesTwo=['Я почувствовал что ты сделал это специально <a:noNoppersDisagree:842113425924161588> ','Пахнет обманом <:Murlock_Jokir:874544048029978664>','На этот раз без штрафа но будьте осторожны <:Adolfik:877277880697122847>']
+#phrasesOne=['Добрый вечер <:lambert:887347067742208011>','Добрый вечер <:lambert:887347067742208011>','Умей проигрывать дружок, ты проиграл <:Murlock_Jokir:874544048029978664>','Может еще сюда нажмёшь: \n<https://www.youtube.com/watch?v=dQw4w9WgXcQ> <:murlockCoolStory:878462386749714492>','Ты пойман за руку, дешёвка','<a:orchesterDrums:886604700110159924> <a:orchesterGuitar:886604700714152026> <a:orchesterMex:886604700626079804> <a:orchesterMicro:886604700449898576> <a:orchesterPiano:886604700642844672> <a:orchesterSax:886604700613509191>']
+phrasesOne=[\
+'Добрый вечер <:lambert:887347067742208011>',\
+'<a:orchesterDrums:886604700110159924> <a:orchesterGuitar:886604700714152026> <a:orchesterMex:886604700626079804> <a:orchesterMicro:886604700449898576> <a:orchesterPiano:886604700642844672> <a:orchesterSax:886604700613509191>'\
+]
+phrasesTwo=[\
+'Я почувствовал что ты сделал это специально <a:noNoppersDisagree:842113425924161588> ',\
+'Пахнет обманом <:Murlock_Jokir:874544048029978664>',\
+'На этот раз без штрафа но будьте осторожны <:Adolfik:877277880697122847>'\
+]
 
 @client.event
 @asyncio.coroutine
 def on_message(message):
-    scenario = random.randint(5, 10)
+    scenario = random.randint(2, 10)
     if message.author == client.user:
         return
     if message.content.lower() == 'да':
