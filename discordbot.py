@@ -80,4 +80,7 @@ def on_message(message):
             yield from message.add_reaction(d)
             yield from message.add_reaction(a)
             yield from message.add_reaction(dot)
+    if message.content.endswith(')))'):
+        sk=client.get_emoji(897515314173079614)
+        yield from message.add_reaction(sk)
 client.run(token)
